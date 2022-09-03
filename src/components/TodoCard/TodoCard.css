@@ -1,6 +1,6 @@
 .todo-card {
 	width: 500px;
-	height: 250px;
+	height: auto;
 	margin: 10px;
 	padding: 10px;
 	box-shadow: 0px 5px 35px 1px rgba(93, 124, 112, 0.15);
