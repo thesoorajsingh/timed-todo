@@ -8,9 +8,9 @@ function TodoCard({ time, todos, status, setStatus }) {
 	);
 
 	const currentTime = new Date().getTime();
-	const givenTime = new Date(time);
+	const givenTime = new Date(time).getTime();
 
-	// currentTime > givenTime ? setStatus("Expired") : setStatus("Running");
+	currentTime > givenTime ? setStatus("Expired") : setStatus("Running");
 
 	const [allChecked, setAllChecked] = React.useState(0);
 
