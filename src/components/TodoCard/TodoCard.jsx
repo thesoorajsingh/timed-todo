@@ -11,7 +11,7 @@ function TodoCard({ time, todos }) {
 
 	const handleCheck = (position) => {
 		console.log(checked);
-		const updated = checked.checked.map((item, index) => {
+		const updated = checked.map((item, index) => {
 			return index === position ? !item : item;
 		});
 
@@ -23,8 +23,7 @@ function TodoCard({ time, todos }) {
 				return sum;
 			}, 0)
 		);
-		setChecked({ ...checked, id: uuidv4(), checked: updated });
-		console.log(checked);
+		setChecked(updated);
 	};
 
 	return (
