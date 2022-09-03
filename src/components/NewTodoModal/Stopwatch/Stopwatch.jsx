@@ -1,15 +1,20 @@
 import React from "react";
 import "./Stopwatch.css";
 
-function Stopwatch({ time, setStatus }) {
+function Stopwatch({ time, status, setStatus }) {
 	const [seconds, setSeconds] = React.useState(0);
 	const [minutes, setMinutes] = React.useState(0);
 
-	setInterval(() => {
+	const timer = setInterval(() => {
 		const currentDate = new Date();
 		const timeBetweenDates = Math.ceil((time - currentDate) / 1000);
 		setWatch(timeBetweenDates);
-	}, 250);
+
+		if (timeBetweenDates <= 0) {
+			setStatus("Expired");
+			clearInterval(timer);
+		}
+	}, 500);
 
 	function setWatch(time) {
 		setSeconds(time % 60 < 10 ? `0${time % 60}` : time % 60);

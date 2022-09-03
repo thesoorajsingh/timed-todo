@@ -16,7 +16,6 @@ function App() {
 	const [filter, setFilter] = useState("All");
 	const [time, setTime] = useState("");
 	const [open, setOpen] = useState(false);
-	const [status, setStatus] = useState("Running");
 	const { width } = useWindowSize();
 
 	useEffect(() => {
@@ -65,13 +64,7 @@ function App() {
 							<div className="cards-section">
 								{filteredTasks.map((item, index) => {
 									return (
-										<TodoCard
-											status={status}
-											setStatus={setStatus}
-											time={item.time}
-											todos={item.todo}
-											key={index}
-										/>
+										<TodoCard time={item.time} todos={item.todo} key={index} />
 									);
 								})}
 							</div>

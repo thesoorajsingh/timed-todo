@@ -1,21 +1,17 @@
 import React from "react";
 import "./TodoCard.css";
 import Stopwatch from "../NewTodoModal/Stopwatch/Stopwatch";
+import { v4 as uuidv4 } from "uuid";
+import { useState } from "react";
 
-function TodoCard({ time, todos, status, setStatus }) {
-	const [checked, setChecked] = React.useState(
-		new Array(todos.length).fill(false)
-	);
-
-	const currentTime = new Date().getTime();
-	const givenTime = new Date(time).getTime();
-
-	currentTime > givenTime ? setStatus("Expired") : setStatus("Running");
-
+function TodoCard({ time, todos }) {
+	const [status, setStatus] = useState("Running");
+	const [checked, setChecked] = useState(new Array(todos.length).fill(false));
 	const [allChecked, setAllChecked] = React.useState(0);
 
 	const handleCheck = (position) => {
-		const updated = checked.map((item, index) => {
+		console.log(checked);
+		const updated = checked.checked.map((item, index) => {
 			return index === position ? !item : item;
 		});
 
@@ -27,7 +23,8 @@ function TodoCard({ time, todos, status, setStatus }) {
 				return sum;
 			}, 0)
 		);
-		setChecked(updated);
+		setChecked({ ...checked, id: uuidv4(), checked: updated });
+		console.log(checked);
 	};
 
 	return (
