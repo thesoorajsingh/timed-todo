@@ -1,6 +1,6 @@
 {
-	"short_name": "Timed Todo",
-	"name": "Timed Todo React App",
+	"short_name": "React App",
+	"name": "Create React App Sample",
 	"icons": [
 		{
 			"src": "favicon.ico",
