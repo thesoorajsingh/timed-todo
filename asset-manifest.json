@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/thesoorajsingh.github.io/timed-todo/static/css/main.24a4d116.css",
+    "main.js": "/thesoorajsingh.github.io/timed-todo/static/js/main.d93d78af.js",
+    "index.html": "/thesoorajsingh.github.io/timed-todo/index.html",
+    "static/media/Close.svg": "/thesoorajsingh.github.io/timed-todo/static/media/Close.9d731adde80cb2804960214d82842e53.svg",
+    "static/media/Home.svg": "/thesoorajsingh.github.io/timed-todo/static/media/Home.5bd37c5064f4933a6802d66049fc80ee.svg",
+    "static/media/Menu.svg": "/thesoorajsingh.github.io/timed-todo/static/media/Menu.a7606f278833c19fd8e0f4d4fa83de24.svg",
+    "main.24a4d116.css.map": "/thesoorajsingh.github.io/timed-todo/static/css/main.24a4d116.css.map",
+    "main.d93d78af.js.map": "/thesoorajsingh.github.io/timed-todo/static/js/main.d93d78af.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.24a4d116.css",
+    "static/js/main.d93d78af.js"
+  ]
+}
