@@ -9,7 +9,6 @@ function NewTimer({
 	setShowModal,
 }) {
 	const [todo, setTodo] = useState([{ id: uuidv4(), todo: "" }]);
-	const [newTime, setNewTime] = useState("");
 
 	const handleFormSubmit = (e) => {
 		e.preventDefault();

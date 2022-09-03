@@ -9,6 +9,7 @@ function Sidebar({ filter, setFilter, open, setOpen }) {
 
 	const handleClick = (e) => {
 		setFilter(e.target.innerText);
+		setOpen(!open);
 	};
 
 	const handleSidebarClick = () => {

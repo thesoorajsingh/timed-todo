@@ -9,10 +9,11 @@ function Stopwatch({ time, status, setStatus }) {
 		const currentDate = new Date();
 		const timeBetweenDates = Math.ceil((time - currentDate) / 1000);
 		setWatch(timeBetweenDates);
-
 		if (timeBetweenDates <= 0) {
 			setStatus("Expired");
 			clearInterval(timer);
+		} else {
+			setStatus("Running");
 		}
 	}, 500);
 
