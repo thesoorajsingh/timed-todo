@@ -1,0 +1,34 @@
+.stopwatch {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.stopwatch > h3 {
+	font-size: 24px;
+	font-weight: 600;
+	margin: 10px 0;
+}
+
+.green {
+	color: #5CE595;
+}
+
+.yellow {
+	color: #FFB75E;
+}
+
+.red {
+	color: #FF4D4D;
+}
+
+@media screen and (max-width: 768px) {
+	.stopwatch {
+		flex-direction: column;
+	}
+
+	.stopwatch > h3 {
+		font-size: 24px;
+	}
+}

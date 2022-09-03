@@ -1,38 +1,211 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Readex Pro', sans-serif;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.menu-icon {
+  position: absolute;
+  top: 50px;
+  left: 30px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cards-section {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  place-items: center;
+  row-gap: 150px;
+  column-gap: 0;
+}
+
+.new-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.add-card {
   display: flex;
   flex-direction: column;
+  justify-content: center;text-align: center;
   align-items: center;
+  border-radius: 15px;
+  box-shadow: 0px 5px 35px 1px rgba(93, 124, 112, 0.15);
+  padding: 1rem;
+  width: 450px;
+  height: 300px;
+}
+
+.add-card > h2 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.add-card > p {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 1rem 0;
+}
+
+.add-button {
+  background: linear-gradient(270.07deg, #20D8AA 4.09%, rgba(86, 217, 132, 0.973704) 99.94%);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background: linear-gradient(270.07deg, #20D8AA 4.09%, rgba(66, 168, 102, 0.974) 99.94%);
+}
+
+.new-task {
+  width: fit-content;
+  height: fit-content;
+  margin: 4rem;
+  z-index: 100;
+  align-self: flex-end;
+}
+
+/* Modal Styling */
+
+.modal {
+  position: relative;
+  display: flex;
+  padding: 20px 40px;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  box-shadow: 0px 5px 35px 1px rgba(93, 124, 112, 0.15);
+  width: fit-content;
+  height: auto;
+  border-radius: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.modal > h2 {
+  font-size: 40px;
+  font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.modal > input {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 1rem 0;
+  border: 0.5px solid #828282;
+  border-radius: 5px;
+}
+
+.modal > input:hover {
+  border: 0.5px solid #20D8AA;
+}
+
+.modal > input:focus {
+  outline: none;
+  border: 0.5px solid #20D8AA;
+}
+
+#time {
+  padding: 0.75rem;
+}
+
+#todo {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 1rem 0;
+  border: 0.5px solid #828282;
+  border-radius: 5px;
+  padding: 0.75rem;
+}
+
+#todo:hover {
+  border: 0.5px solid #20D8AA;
+}
+
+#todo:active{
+  outline: none;
+  border: none;
+  border: 0.5px solid #20D8AA;
+}
+
+#todo:focus {
+  outline: none;
+  border: 0.5px solid #20D8AA;
+}
+
+form {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal > input[number] {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+}
+
+.add-task {
+  border-radius: 50px;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  height: fit-content;
+  background-color: #5ce695;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.create {
+  margin: 20px 0;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+  .cards-section {
+    grid-template-columns: repeat(1, auto);
+    row-gap: 100px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .new-task {
+    margin: 3rem;
+  }
+
+  .new-modal {
+    width: 100%;
+    /* justify-content: center; */
+  }
+
+  .add-card {
+    width: 75%;
+  }
+
+  .modal {
+    width: 75%;
+    padding: 1.2rem;
+  }
+
+  .todo-card {
+    width: 75%;
   }
 }

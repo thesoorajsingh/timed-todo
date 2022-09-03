@@ -1,0 +1,87 @@
+.sidebar {
+	height: 100vh;
+	background-color: #f2f2f2;
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: sticky;
+	top: 0;
+}
+
+.main-container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+}
+
+.close-icons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 0.75rem;
+	width: 100%;
+	cursor: pointer;
+}
+
+.options {
+	flex: 0.9;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.list-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+	padding: 20px;
+	margin: 10px auto;
+	border: 1px solid #333;
+	background-color: #fff;
+	color: #333;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.active {
+	background-color: #5ce695;
+	color: #000;
+}
+
+@media screen and (max-width: 768px) {
+
+	.main-container{
+		width: 100%;
+	}
+
+	.closed {
+		width: 0;
+	}
+
+	.open{
+		width: 100%;
+	}
+
+	.options .open {
+		display: block;
+		width: 100vw;
+	}
+
+	.options .closed {
+		display: none;
+	}
+
+	.sidebar .open {
+		width: 100vw;
+	}
+}
