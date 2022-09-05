@@ -33,13 +33,16 @@ function App() {
 
 	return (
 		<div className="App">
-			{!open && (
-				<img
-					src={Menu}
-					alt="Menu Icon"
-					className="menu-icon"
-					onClick={() => setOpen(!open)}
-				/>
+			{!open && width < 768 && (
+				<>
+					<img
+						src={Menu}
+						alt="Menu Icon"
+						className="menu-icon"
+						onClick={() => setOpen(!open)}
+					/>
+					<h4 className="current-filter">{filter}</h4>
+				</>
 			)}
 			<div
 				className={`sidebar ${width < 768 ? (open ? "open" : "closed") : ""}`}

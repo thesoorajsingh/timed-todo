@@ -1,9 +1,7 @@
 import React from "react";
 import "./TodoCard.css";
 import Stopwatch from "../NewTodoModal/Stopwatch/Stopwatch";
-import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
-import { useLocalStorage } from "../../utils/apiData";
 
 function TodoCard({ time, todos }) {
 	const [status, setStatus] = useState("Running");
